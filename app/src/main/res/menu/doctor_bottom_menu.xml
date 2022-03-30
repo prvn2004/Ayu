@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/doctor_AppointmentsMenu"
+        android:title="My Appointments"
+        android:icon="@drawable/appointments_logo"/>
+    <item
+        android:id="@+id/doctor_ProfileMenu"
+        android:title="Profile"
+        android:icon="@drawable/my_account"
+        />
+
+</menu>
