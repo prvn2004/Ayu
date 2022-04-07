@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AppointmentFragment"
+    android:id="@+id/mainla"
     android:background="@color/LightGrey">
 
     <androidx.appcompat.widget.LinearLayoutCompat

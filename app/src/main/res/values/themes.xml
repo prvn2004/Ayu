@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Theme.Ayu" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/Black</item>
-        <item name="colorPrimaryVariant">@color/Black</item>
-        <item name="colorOnPrimary">@color/LightGreen</item>
+        <item name="colorPrimary">@color/DeepSkyBlue</item>
+        <item name="colorPrimaryVariant">@color/DeepSkyBlue</item>
+        <item name="colorOnPrimary">@color/DeepSkyBlue</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/Teal</item>
         <item name="colorSecondaryVariant">@color/Teal</item>

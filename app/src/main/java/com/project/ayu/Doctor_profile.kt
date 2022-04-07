@@ -46,7 +46,7 @@ class Doctor_profile : Fragment(), Toolbar.OnMenuItemClickListener {
             true
         }
 
-        binding.imageView5.setImageResource(com.project.ayu.R.drawable.ic_baseline_tag_faces_24)
+        binding.imageView5.setImageResource(com.project.ayu.R.drawable.doctoravatarmale)
         binding.DoctorName.text = name
         binding.DoctorAge.text = "Age: $Age"
         binding.DoctorEmail.text = email

@@ -13,6 +13,8 @@ data class MyPatientDataFile(
     val DoctorNumber: String,
     val DoctorTime: String,
     val DoctorDate: String,
+    val DoctorId: String
+
 ) {
 
     var NumberPatient = PatientNumber
@@ -20,6 +22,8 @@ data class MyPatientDataFile(
     var TimeDoctor = DoctorTime
     var DateDoctor = DoctorDate
 //    var TimeDoctor = DoctorTime
+var IdDoctor = DoctorId
+
 
     init {
         NumberPatient = PatientNumber
@@ -43,6 +47,9 @@ data class MyPatientDataFile(
 
     fun getDate(): String {
         return DateDoctor
+    }
+    fun getId(): String {
+        return IdDoctor
     }
 
 

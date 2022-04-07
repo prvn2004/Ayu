@@ -5,19 +5,19 @@
     android:id="@+id/doctor_card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="8dp"
-    android:layout_marginBottom="10dp"
     android:layout_marginLeft="8dp"
+    android:layout_marginTop="10dp"
     android:layout_marginRight="8dp"
-    android:layout_marginTop="10dp">
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/LinearLayout_1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="20dp"
-        android:padding="20px">
+        android:padding="10dp">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,24 +30,24 @@
                 android:id="@+id/doctorCancelButton"
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
                 android:backgroundTint="@color/DarkOrange"
                 android:drawableRight="@drawable/book_arrow"
                 android:text="Cancel"
                 android:textColor="@color/White"
                 android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/DoctorImage"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:layout_constraintStart_toEndOf="@+id/doctorDate"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" />
 
             <ImageView
                 android:id="@+id/DoctorImage"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:background="@drawable/edittext_rounded"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -55,71 +55,85 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.454"
-                tools:src="@drawable/book_arrow" />
+                tools:src="@drawable/doctoravatarmale" />
 
             <TextView
                 android:id="@+id/doctorNumber"
-                android:layout_marginBottom="2dp"
-                android:layout_width="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8740940411"
-                android:textStyle="bold"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="15sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-                app:layout_constraintHorizontal_bias="0.173"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/doctornu"
+                app:layout_constraintTop_toTopOf="@+id/DoctorImage"
+                app:layout_constraintVertical_bias="0.263" />
+
+            <TextView
+                android:id="@+id/doctornu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doctor No - "
+                android:drawableLeft="@drawable/ic_baseline_call_24"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.074"
                 app:layout_constraintStart_toEndOf="@+id/DoctorImage"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.13" />
+                app:layout_constraintTop_toTopOf="@+id/DoctorImage"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/doctorDate"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="Date: 2022-03-19"
-                android:textStyle="bold"
                 android:textColor="#000000"
                 android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/doctorCancelButton"
-                app:layout_constraintHorizontal_bias="0.233"
-                app:layout_constraintStart_toEndOf="@+id/DoctorImage"
+                app:layout_constraintEnd_toEndOf="@+id/doctorNumber"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/doctorNumber"
                 app:layout_constraintTop_toBottomOf="@+id/doctorNumber"
-                app:layout_constraintVertical_bias="0.263" />
+                app:layout_constraintVertical_bias="0.129" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="110dp"
-                android:layout_height="62dp"
-                android:layout_marginEnd="4dp"
-                android:orientation="vertical"
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="id"
+                android:textColor="#000000"
+                android:textSize="6sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/doctorNumber"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/doctorNumber"
+                app:layout_constraintTop_toBottomOf="@+id/doctorNumber"
+                app:layout_constraintVertical_bias="0.736" />
+
+            <TextView
+                android:id="@+id/TimeButton1"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@color/LightGrey"
+                android:gravity="center"
+                android:text="8:00-9:00"
+                android:textColor="@color/Black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/doctorCancelButton"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/DoctorImage"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.15">
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:text="Time"
-                    android:textColor="#000000" />
-
-                <TextView
-                    android:id="@+id/TimeButton1"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@color/LightGrey"
-                    android:gravity="center"
-                    android:text="8:00-9:00"
-                    android:textColor="@color/Black"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
+                app:layout_constraintHorizontal_bias="0.981"
+                app:layout_constraintStart_toEndOf="@+id/doctorDate"
+                app:layout_constraintTop_toTopOf="@+id/doctornu"
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>

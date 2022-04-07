@@ -10,18 +10,20 @@ data class PastAppointmentsDataFile(
     val DoctorNumber: String,
     val DoctorImage: Int,
     val DoctorDate: String,
+    val DoctorId: String
 ) {
     var TimeDoctor = DoctorTime
     var NumberDoctor = DoctorNumber
     var ImageDoctor = DoctorImage
     var DateDoctor = DoctorDate
+    var IdDoctor = DoctorId
 
     init {
         TimeDoctor = DoctorTime.toString()
         NumberDoctor = DoctorNumber
         ImageDoctor = DoctorImage
         DateDoctor = DoctorDate
-
+        IdDoctor = DoctorId
     }
 
     fun getTime(): String? {
@@ -35,8 +37,13 @@ data class PastAppointmentsDataFile(
     fun getImage(): Int {
         return ImageDoctor
     }
-    fun getDate():String{
-        return  DateDoctor
+
+    fun getDate(): String {
+        return DateDoctor
+    }
+
+    fun getId(): String {
+        return IdDoctor
     }
 
 

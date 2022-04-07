@@ -7,20 +7,19 @@
     android:background="@color/LightGrey"
     tools:context=".ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="380dp"
         android:layout_height="259dp"
-        android:background="@drawable/edittext_rounded"
-        android:elevation="20dp"
+        android:background="@color/white"
+        android:elevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.145">
+        app:layout_constraintVertical_bias="0.127">
 
         <TextView
             android:id="@+id/PatientGender"
@@ -34,10 +33,10 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.239"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
             app:layout_constraintTop_toBottomOf="@+id/imageView5"
-            app:layout_constraintVertical_bias="0.165" />
+            app:layout_constraintVertical_bias="0.158" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -64,10 +63,10 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintHorizontal_bias="0.456"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.106" />
+            app:layout_constraintTop_toTopOf="@+id/imageView5"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/patientAge"
@@ -80,9 +79,9 @@
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.118"
-            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="@+id/PatientName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/PatientName"
             app:layout_constraintTop_toBottomOf="@+id/PatientName"
             app:layout_constraintVertical_bias="0.088" />
 
@@ -97,11 +96,11 @@
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.217"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/PatientGender"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/PatientGender"
             app:layout_constraintTop_toBottomOf="@+id/PatientGender"
-            app:layout_constraintVertical_bias="0.207" />
+            app:layout_constraintVertical_bias="0.215" />
 
         <TextView
             android:id="@+id/patientNumber"
@@ -114,19 +113,21 @@
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.214"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/PatientEmail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/PatientEmail"
             app:layout_constraintTop_toBottomOf="@+id/PatientEmail"
-            app:layout_constraintVertical_bias="0.542" />
+            app:layout_constraintVertical_bias="0.555" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/toolbar_round"
-        android:gravity="center_vertical"
+        android:layout_height="140dp"
+        android:background="@color/white"
+        android:gravity="top"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"

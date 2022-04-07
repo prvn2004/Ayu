@@ -6,11 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".Patient_viewing_doctor_profile">
 
-    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/close"
+                    android:layout_width="58dp"
+                    android:layout_height="49dp"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/profile_rounded"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.011"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
   >
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/BookDoctorFinal"
@@ -21,11 +53,11 @@
             android:textColor="@color/White"
             app:backgroundTint="#282637"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.146"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout3"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-            app:layout_constraintVertical_bias="0.112" />
+            app:layout_constraintVertical_bias="0.121" />
 
         <TextView
             android:id="@+id/doctorExperienceYear2"
@@ -40,9 +72,9 @@
             android:textColorHighlight="@color/DeepSkyBlue"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.172"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/doctorImage"
+            app:layout_constraintHorizontal_bias="0.56"
+            app:layout_constraintStart_toStartOf="@+id/doctorImage"
             app:layout_constraintTop_toBottomOf="@+id/doctorImage"
             app:layout_constraintVertical_bias="0.021" />
 
@@ -54,11 +86,11 @@
             android:textColor="@color/DeepSkyBlue"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.679"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/doctorExpertiseText3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/doctorExpertiseText3"
             app:layout_constraintTop_toBottomOf="@+id/doctorExpertiseText3"
-            app:layout_constraintVertical_bias="0.022" />
+            app:layout_constraintVertical_bias="0.029" />
 
         <TextView
             android:id="@+id/doctorExpertiseText3"
@@ -69,11 +101,11 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.169"
-            app:layout_constraintStart_toEndOf="@+id/doctorImage"
+            app:layout_constraintEnd_toEndOf="@+id/doctorNumber2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/doctorNumber2"
             app:layout_constraintTop_toBottomOf="@+id/doctorNumber2"
-            app:layout_constraintVertical_bias="0.021" />
+            app:layout_constraintVertical_bias="0.012" />
 
         <TextView
             android:id="@+id/doctorNumber2"
@@ -84,26 +116,27 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.21"
-            app:layout_constraintStart_toEndOf="@+id/doctorImage"
+            app:layout_constraintEnd_toEndOf="@+id/doctorName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/doctorName"
             app:layout_constraintTop_toBottomOf="@+id/doctorName"
-            app:layout_constraintVertical_bias="0.023" />
+            app:layout_constraintVertical_bias="0.018" />
 
         <TextView
             android:id="@+id/doctorName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Praveen kumar"
             android:gravity="left"
+            android:text="Praveen kumar"
+            android:textStyle="bold"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.787"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.048" />
+            app:layout_constraintHorizontal_bias="0.237"
+            app:layout_constraintStart_toEndOf="@+id/doctorImage"
+            app:layout_constraintTop_toTopOf="@+id/doctorImage"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/doctorImage"
@@ -111,7 +144,6 @@
             android:layout_height="171dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/edittext_rounded"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -119,7 +151,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.028"
-            android:src="@drawable/ic_baseline_group_work_24"/>
+            android:src="@drawable/doctoravatarmale"/>
 
         <LinearLayout
             android:id="@+id/linearLayout3"
@@ -214,4 +246,5 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>

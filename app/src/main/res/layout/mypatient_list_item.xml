@@ -27,6 +27,52 @@
 
 
             <TextView
+                android:id="@+id/id"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="id"
+                android:textColor="#000000"
+                android:textSize="6sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.56"
+                app:layout_constraintStart_toStartOf="@+id/AppointmentDate"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.068" />
+
+            <TextView
+                android:id="@+id/PatientNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8740940411"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/doctorCancelButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/DoctorNumber"
+                app:layout_constraintTop_toBottomOf="@+id/patientNumber2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/patientNumber2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient No. :"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/doctorCancelButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/DoctorNumber"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.141" />
+
+            <TextView
                 android:id="@+id/DoctorNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -34,89 +80,62 @@
                 android:textAlignment="viewStart"
                 android:textColor="#000000"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.034"
+                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.141" />
-
-            <TextView
-                android:id="@+id/PatientNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="64dp"
-                android:text="Patient No. : 8740940411"
-                android:textColor="#000000"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-                app:layout_constraintHorizontal_bias="0.081"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/DoctorName"
-                app:layout_constraintVertical_bias="0.141" />
+                app:layout_constraintTop_toBottomOf="@+id/PatientNumber"
+                app:layout_constraintVertical_bias="0.134" />
 
             <TextView
                 android:id="@+id/AppointmentDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="date: 2022-03-19"
                 android:textColor="@color/DeepSkyBlue"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-                app:layout_constraintHorizontal_bias="0.094"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PatientNumber"
-                app:layout_constraintVertical_bias="0.326" />
+                app:layout_constraintEnd_toEndOf="@+id/DoctorNumber"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/DoctorNumber"
+                app:layout_constraintTop_toBottomOf="@+id/DoctorNumber"
+                app:layout_constraintVertical_bias="1.0" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="104dp"
-                android:layout_height="44dp"
-                android:orientation="vertical"
+            <TextView
+                android:id="@+id/TimeButton1"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="96dp"
+                android:background="@color/LightGrey"
+                android:gravity="center"
+                android:text="8:00"
+                android:textColor="@color/Black"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.978"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.269">
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:text="Time"
-                    android:textColor="#000000" />
-
-                <TextView
-                    android:id="@+id/TimeButton1"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@color/LightGrey"
-                    android:gravity="center"
-                    android:text="8:00"
-                    android:textColor="@color/Black"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
+                app:layout_constraintEnd_toEndOf="@+id/doctorCancelButton"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/PatientNumber"
+                app:layout_constraintTop_toTopOf="@+id/patientNumber2"
+                app:layout_constraintVertical_bias="0.024" />
 
             <Button
                 android:id="@+id/doctorCancelButton"
                 android:layout_width="113dp"
                 android:layout_height="46dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
                 android:backgroundTint="@color/DarkOrange"
                 android:drawableRight="@drawable/book_arrow"
                 android:text="Cancel"
                 android:textColor="@color/White"
                 android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/AppointmentDate"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:layout_constraintStart_toEndOf="@+id/AppointmentDate"
+                app:layout_constraintTop_toBottomOf="@+id/TimeButton1"
                 app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

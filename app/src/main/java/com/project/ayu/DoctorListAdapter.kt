@@ -16,8 +16,7 @@ import kotlin.coroutines.coroutineContext
 
 
 class MyAdapter(
-    val LinkList: ArrayList<DoctorDataFile>,
-    private val listener: (DoctorDataFile) -> Unit
+    val LinkList: ArrayList<DoctorDataFile>
 ) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() { //class  which will take prameter(list of strings)
 // ------------------------------------------------------------------------------------------------------------------------------------------
@@ -48,7 +47,16 @@ class MyAdapter(
     ) {
         val Link = LinkList[position]
         holder.friction(Link, position, LinkList)
-        binding.DoctorBookButton.setOnClickListener { listener(Link) }
+        binding.DoctorBookButton.setOnClickListener {
+            val intent = Intent(it.context, Patient_viewing_doctor_profile::class.java)
+            intent.putExtra("DoctorName", LinkList.get(position).getName().toString())
+            intent.putExtra("DoctorExperience", LinkList.get(position).getExperience().toString())
+            intent.putExtra("DoctorExpertise", LinkList.get(position).getExpertise().toString())
+            intent.putExtra("DoctorNumber", LinkList.get(position).getNumber().toString())
+            intent.putExtra("DoctorReg", LinkList.get(position).getRegNo().toString())
+            it.context.startActivity(intent)
+
+        }
 
 //                setOnClickListener { listener(Link) }
     }

@@ -49,37 +49,34 @@ class Past_Appointments : Fragment() {
             Method.GET, JsonFile, Response.Listener { response ->
                 binding.progressBar.visibility = View.GONE
 
-                val jsonArray = JSONArray(response)
-                Log.d("here", response)
+
                 try {
+                    val jsonArray = JSONArray(response)
+                    Log.d("here", response)
                     for (i in 0..jsonArray.length() - 1) {
                         val jsonObject: JSONObject = jsonArray.getJSONObject(i)
                         val doc_ph_number = jsonObject.getString("ph_no_doctor")
                         val patient_ph_number = jsonObject.getString("ph_no_patient")
                         val date = jsonObject.getString("date")
                         val time = jsonObject.getString("time")
-                        Toast.makeText(activity, date, Toast.LENGTH_SHORT).show()
+                        val id = jsonObject.getString("_id")
 
                         itemList.add(
                             PastAppointmentsDataFile(
                                 " $time",
-                            "Doc No.: $patient_ph_number",
-                                R.drawable.ic_baseline_tag_faces_24,
-                                "Date: $date"
+                                "+91$doc_ph_number",
+                                R.drawable.doctoravatarmale,
+                                "Date: $date",
+                                id
                             )
                         )
 
                     }
                 } catch (e: Exception) {
                     binding.progressBar.visibility = View.GONE
-
                     e.printStackTrace()
-                    Toast.makeText(
-                        activity,
-                        "$e", Toast.LENGTH_LONG
-                    ).show()
-                }
 
+                }
 
                 var adaptor = PastAppointmentAdapter(itemList)
                 binding.recyclerView.adapter = adaptor
@@ -88,10 +85,6 @@ class Past_Appointments : Fragment() {
             }, Response.ErrorListener { error ->
                 binding.progressBar.visibility = View.GONE
 
-                Toast.makeText(
-                    activity,
-                    "$error", Toast.LENGTH_LONG
-                ).show()
             }) {
             override fun getParams(): Map<String, String> {
                 val params1: HashMap<String, String> = HashMap()
@@ -113,5 +106,6 @@ class Past_Appointments : Fragment() {
 
         return binding.root
     }
+
 }
 

@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.AuthFailureError
@@ -30,7 +31,7 @@ class Doctor_Appointments : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View{
+    ): View {
         LinkModel = arrayListOf<MyPatientDataFile>()
         binding = FragmentDoctorAppointmentsBinding.inflate(inflater, container, false)
 
@@ -44,23 +45,27 @@ class Doctor_Appointments : Fragment() {
             Method.GET, JsonFile, Response.Listener { response ->
                 binding.progressBar.visibility = View.GONE
 
-                val jsonArray = JSONArray(response)
-                Log.d("here", response)
+
                 try {
+                    val jsonArray = JSONArray(response)
+                    Log.d("here", response)
                     for (i in 0..jsonArray.length() - 1) {
                         val jsonObject: JSONObject = jsonArray.getJSONObject(i)
                         val doc_ph_number = jsonObject.getString("ph_no_doctor")
                         val patient_ph_number = jsonObject.getString("ph_no_patient")
                         val date = jsonObject.getString("date")
                         val time = jsonObject.getString("time")
+                        val id = jsonObject.getString("_id")
+
                         Toast.makeText(activity, date, Toast.LENGTH_SHORT).show()
 
                         itemList.add(
                             MyPatientDataFile(
-                               "My no.: $patient_ph_number",
-                                "Patient No.: $doc_ph_number",
+                                "My no.: $patient_ph_number",
+                                "+91$doc_ph_number",
                                 time,
-                                "Date: $date"
+                                "Date: $date",
+                                id
                             )
                         )
 
@@ -69,10 +74,6 @@ class Doctor_Appointments : Fragment() {
                     binding.progressBar.visibility = View.GONE
 
                     e.printStackTrace()
-                    Toast.makeText(
-                        activity,
-                        "$e", Toast.LENGTH_LONG
-                    ).show()
                 }
 
 
@@ -108,5 +109,6 @@ class Doctor_Appointments : Fragment() {
 
         return binding.root
     }
+
 
 }

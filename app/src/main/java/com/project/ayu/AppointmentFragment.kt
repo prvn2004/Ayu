@@ -27,14 +27,16 @@ AppointmentFragment : Fragment() {
     private var FetchDoctors =
         "http://ayubackend.herokuapp.com/api/doctor/fetchalldoctors"
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?
+
+    ) {
         super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         LinkModel = arrayListOf<DoctorDataFile>()
 
         binding = FragmentAppointmentBinding.inflate(layoutInflater)
@@ -53,7 +55,7 @@ AppointmentFragment : Fragment() {
             Method.GET, FetchDoctors, Response.Listener<String> { response ->
                 binding.progressBar.visibility = View.GONE
 
-                val jsonArray: JSONArray = JSONArray(response);
+                val jsonArray = JSONArray(response)
                 Log.d("here", response)
                 try {
                     for (i in 0..jsonArray.length() - 1) {
@@ -69,7 +71,7 @@ AppointmentFragment : Fragment() {
                             DoctorDataFile(
                                 name,
                                 ph_number,
-                                R.drawable.ic_baseline_tag_faces_24,
+                                R.drawable.doctoravatarmale,
                                 field_of_specialization,
                                 "Experience: $years_of_exp yrs",
                                 reg_no
@@ -81,26 +83,16 @@ AppointmentFragment : Fragment() {
                     binding.progressBar.visibility = View.GONE
 
                     e.printStackTrace()
-                    Toast.makeText(
-                        activity,
-                        "$e", Toast.LENGTH_LONG
-                    ).show()
                 }
 
-                var adaptor = MyAdapter(itemList) {
-                    OpenFragment()
-
-                }
+                val adaptor = MyAdapter(itemList)
                 binding.recyclerView.adapter = adaptor
 
 
             }, Response.ErrorListener { error ->
                 binding.progressBar.visibility = View.GONE
 
-                Toast.makeText(
-                    activity,
-                    "$error", Toast.LENGTH_LONG
-                ).show()
+
             }) {
             override fun getParams(): Map<String, String> {
 
@@ -110,7 +102,7 @@ AppointmentFragment : Fragment() {
             }
 
             @Throws(AuthFailureError::class)
-            override fun getHeaders(): Map<String, String>? {
+            override fun getHeaders(): Map<String, String> {
                 val params: MutableMap<String, String> = HashMap()
                 params["auth-token"] = newAuthToken
                 return params
@@ -120,26 +112,11 @@ AppointmentFragment : Fragment() {
         val rq = Volley.newRequestQueue(activity)
         rq.add(stringRequest)
 
-        recyclerView.adapter = MyAdapter(itemList) {
-            OpenFragment()
-        }
+        recyclerView.adapter = MyAdapter(itemList)
 
         return binding.root
     }
 
-    private fun OpenFragment() {
-        val newFrag = Patient_viewing_doctor_profile()
-        val args = Bundle()
-        args.putString("YourKey","hello new number")
-        newFrag.arguments = args
-        setCurrentFragment(newFrag)
-    }
 
-    private fun setCurrentFragment(fragment: Fragment) {
-        activity?.supportFragmentManager?.beginTransaction()?.apply {
-            replace(R.id.nav_container, fragment)
-            commit()
-        }
-    }
 
 }
