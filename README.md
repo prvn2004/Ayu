@@ -1,5 +1,8 @@
 # Ayu
 A platform to connect doctors with patients for better medical facilities
 
-To access the project. just download the code in zip file and extract it in a folder. and after that open android studio and at top file section open "open section " 
-open the extracted files.
+
+IT WAS FIRST PROJECT WE STARTED WORKING ON AS 1ST YEARER'S. A GROUP OF HIGHLY PASSIONATE, AND TALENTED(KINDA) PEOPLE. ALL OF OUR GROUP WAS LIKE BEST IN CODING AT SPECIFIC THING. 
+THEN A FUCKER CAME AND DEMOTIVATED THE WHOLE GROUP IN THINKING THAT WE SHOULD STUDY AND LEAVE THIS AND START ON THIS AFTER COLLEGE. TILL THEN WE WILL LEARN MANY THINGS.🤡. HE DO SOME ML THING.
+
+LEARNING NEVER LET PESSIMIST PIECE OF SHIT IN YOUR GROUP. 
